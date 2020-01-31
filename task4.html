@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<title>JST4</title>
+	  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	</head>
+    <body>
+	<div class="container" style="margin-top:50px">
+        <h4>ti dliuB</h4>
+		<p>When click below button text changes to reverse</p>
+		<button class="btn btn-primary" onclick="change()">Reverse</button><br/><br/>
+		<h4 style="color:red" id="rev1"></h4>
+		<p id="sp"></p>
+		<h4 style="color:red" id="rev"></h4>
+	</div>
+		  <script type="text/javascript">
+    function change() {
+            var x = "ti dliuB";
+			var res="";
+			for (i = x.length-1; i >= 0; i--){
+	           res=res+x.charAt(i);
+			  
+			}
+			var a=res.split(" ");
+			document.getElementById("rev1").innerHTML = res;
+			document.getElementById("sp").innerHTML = "Using split method";
+			document.getElementById("rev").innerHTML = a[1]+" "+a[0];
+        }
+       </script>
+    </body>
+</html>

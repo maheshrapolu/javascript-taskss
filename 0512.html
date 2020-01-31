@@ -1,0 +1,66 @@
+
+<html>
+    <body>
+
+    <input type="text" id="a1" onFocus=m1() onBlur=m2()>
+    <input type="text" id="a2" onkeyup=m4()>
+
+    <select id="GFG" name="city" onchange=m3()>
+        <option>Select</option>
+        <option>Hyderbad</option>
+        <option>Vijayawada</option>
+        <option>Vizag</option>
+        <option>tiruvur</option>
+    </select>
+<p id="x1"></p>
+<script>
+
+var p = {
+    "p1": "value1",
+    "p2": "value2",
+    "p3": "value3"
+}
+
+for (key in p) {
+    document.getElementById("x1").innerHTML+=person[key];
+    
+}
+
+
+    function m1()
+    {
+document.getElementById('a1').style.background='red'
+    }
+    function m2()
+    {
+document.getElementById('x1').innerHTML="u r the out of box";
+
+    }
+    function m3()
+    {
+        var x = document.getElementById("GFG").value; 
+                document.getElementById("x1").innerHTML =  
+                "Selected City: " + x; 
+
+
+    }
+
+    function m4()
+    {
+var res=document.getElementById('a2').value;
+//alert(res.length)
+if(res.length<5)
+{
+    document.getElementById("x1").innerHTML ="Required length is 5 characters : " ; 
+
+}
+
+    }
+
+</script>
+
+
+
+
+</body>
+</html>

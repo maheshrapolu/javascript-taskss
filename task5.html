@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+HTML: <input type="checkbox" id="html"  onclick="myFunction()">
+CSS: <input type="checkbox" id="css"  onclick="myFunction()">
+
+<p id="txt1"></p>
+<p id="txt2"></p>
+<script>
+function myFunction() {
+  var html = document.getElementById("html");
+  var css = document.getElementById("css");
+  var txt1 = document.getElementById("txt1");
+  var txt2 = document.getElementById("txt2");
+  if (html.checked == true ){
+    document.getElementById("txt1").innerHTML = "You checked HTML";
+  }else if(html.checked == false){
+    var elem = document.getElementById("txt1");
+	elem.parentNode.removeChild(elem);
+  }
+  else if(css.checked == true ){
+  alert("CSS");
+     document.getElementById("txt2").innerHTML = "You checked CSS";
+  }
+}
+</script>
+
+</body>
+</html>

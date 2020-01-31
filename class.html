@@ -1,0 +1,44 @@
+<html>
+    <body>
+       
+<p>Angular training </p>
+<p>Javascript training</p>
+        <input type="text" id="name" onchange="red()">  
+        <button onclick="ger()">onclick</button>
+        <p id="de"></p>
+<input type="text" oncopy="copy()" value="autometcally copy text">
+<p id="don"> don't copy</p>
+        <div oncontextmenu="whi()">
+            <p>Angular training(oncontextmenu)</p>
+            <p>Angular training</p>
+            <p>Angular training</p>
+
+        </div>
+        <h1 ondblclick="sa()">double click change text</h1>
+        <p id="demmm">click bouble</p>
+        <input type="text" onfocus="wewe(this)">
+<script>
+ 
+  function red(){
+      var x =document.getElementById("name");
+      x.value = x.value.toUpperCase();
+}
+function ger(){
+document.getElementById("de").innerHTML="ANGULAR TRSINING";
+  }
+  function whi(){
+      alert("Don't click rigt click");
+  }
+  
+  function copy(){
+      document.getElementById("dem").innerHTML="copy code ALSO";
+  }
+  function sa(){
+      document.getElementById("demmm").innerHTML="Double Click Change............. "
+  }
+  function wewe(x){
+    x.style.background = "yellow";
+  }
+</script>
+    </body>
+</html>

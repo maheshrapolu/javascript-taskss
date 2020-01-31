@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<title>JST1</title>
+	  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	</head>
+    <body>
+        <!-- <button onclick="hello()">click</button> -->
+		 <script type="text/javascript">
+        var x= prompt("enter user number");
+    //    function hello(){
+        var str1 = new String("<h4><b>Entered number is positive.</b></h4>");
+		var str2 = new String("<h4><b>Entered number is zero.</b></h4>");
+		var str3 = new String("<h4><b>Entered number is negative.</b></h4>");
+		var str4 = new String("<h4><b>Please enter only numbers.</b></h4>");
+       if(x>1){
+          document.write(str1.fontcolor( "green" ));
+       } else if(x<1&&x!=0){
+	     document.write(str3.fontcolor( "red" ));
+	   }else if(x==0){
+	   document.write(str2.fontcolor( "blue" ));
+	   } 
+	   else{
+	     document.write(str4.fontcolor( "red" ));
+	   }
+    // }
+       
+       </script>
+    </body>
+</html>

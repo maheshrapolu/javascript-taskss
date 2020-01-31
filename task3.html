@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Travels</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    
+  <script>  
+function validateform(){  
+var t=document.myform.tn.value;  
+var e=document.myform.email.value;  
+ //alert(t+"kkkk"+e) 
+if (t=="" && e==""  ){  
+  document.getElementById("message").innerHTML="<b>Enter Ticket Number and E-Mail/Phone Number.</b>";
+    
+  return false;  
+}
+else if (t==""  ){  
+  document.getElementById("message").innerHTML="<b>Enter Ticket Number.</b>";
+    
+  return false;  
+}
+else if(e=="" ){
+ document.getElementById("message").innerHTML="<b>Enter the E-Mail/Phone Number.</b>";
+  return false; 
+}
+
+else{   
+   document.getElementById("message").innerHTML='<b style="color: green">OK, Successfull.</b>';
+  //alert(c);
+  //document.write(c.fontcolor( "green" ));
+  return false;  
+  }  
+}  
+</script> 
+</head>
+<body>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <!-- Brand/logo -->
+  <a class="navbar-brand" href="#">
+    <img src="http://cdn-assets0-cf-r5in.ticketsimply.net/assets/kallada_v1/images/logo-2723659c6d6fc1cf3f68806fb71526d8e73700361fdfca9a1b64ff8a15601823.png" alt="logo" style="width:250px;">
+  </a>
+  
+</nav>
+<div class="container" style="margin-top:140px">
+  <h2 style="color:brown">Print Ticket</h2><br/>
+
+ 
+    <div class="row">
+      <div class="col-5">
+	   <form name="myform" onsubmit="return validateform()">
+	    <label><b>Ticket Number:</b></label>
+        <input type="text" class="form-control" id="tn" placeholder="Enter Your Ticket Number" name="tn"><br/>
+		<label><b>Email/Phone Number:</b></label>
+		<input type="text" id="email" class="form-control" placeholder="Enter Your Email/Phone Number" name="email"><br/>
+		<input type="submit" value="Print Ticket" class="btn btn-primary">
+		  </form><br/>
+		  <p>Enter your Ticket Number and the email address used while booking the ticket</p><br/>
+		  <p id="message" style="color:red"></p>
+		  
+      </div>
+      <div class="col-7" style="margin-top:-70px">
+        <img src="bus.png"/>
+      </div>
+	  
+    </div>
+
+
+ 
+<body>  
+ 
+ 
+ 
+  
+</div>
+
+</body>
+</html>

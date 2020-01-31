@@ -1,0 +1,34 @@
+<html>
+    <button onclick="get()">click</button>
+    <p id="g"></p>
+    <div id="myH2">
+    <h2 >angular training</h2>
+    <h2>angular training</h2>
+    <h2 >angular training</h2>
+    <button type="button" onclick="res()">colorchangee</button></div>
+    <img id="myDiv" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR8wL-RvGE0G3B2W-dMd9ZZcgW8BR7nzrIgpXiWYxpio_RFvvCb">
+<button type="button" onclick="myFunction()">add border</button>
+    <script>
+function get(){
+    var val=prompt('plasce enter number');
+    if (val>0){
+        document.getElementById("g").innerHTML="possitive number";
+    
+    }else if(val<0){
+        document.getElementById("g").innerHTML="negitive number"
+    }else{
+        document.getElementById("g").innerHTML="Zero number"
+    }
+}
+
+var i=document.getElementsByTagName('img')[1]
+    i.setAttribute('src',"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSNu_r5yB5P8cAO3kOHHmjovh60axB0yoWnDpew08uonBQYoi0g")
+function myFunction() {
+  document.getElementById("myDiv").style.border = "thick solid red";
+}
+function res() {
+  document.getElementById("myH2").style.color = "red";
+}
+
+    </script>
+</html>

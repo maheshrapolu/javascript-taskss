@@ -1,0 +1,99 @@
+<html>
+    <head>
+        <body>
+            <script>
+            function myFunction()
+            {
+                //alert("lllll")
+                var checkBox = document.getElementById("a3");
+                var checkBox1 = document.getElementById("a4");
+               
+                if (checkBox.checked == true && checkBox1.checked == true){
+                   document.getElementById('x1').innerHTML="You Selected HTML checkbox and CSS checkbox" 
+                 } 
+                 else if(checkBox.checked == true)
+                 {
+                    document.getElementById('x1').innerHTML="You Selected HTML checkbox "   
+                 }
+               else if(checkBox1.checked == true){
+                document.getElementById('x1').innerHTML="You Selected  CSS checkbox"
+               }
+               else if(checkBox.checked == false)
+               {
+                document.getElementById('x1').innerHTML=""
+               }
+               else if(checkBox1.checked == false)
+               {
+                document.getElementById('x1').innerHTML=""
+               }
+                
+            }
+            function myFunction1()
+            {
+              
+                var a = document.getElementById('gender');
+                var b = document.getElementById('gender1');
+               
+           
+                if(a.checked==true)
+                {
+                    document.getElementById('x2').innerHTML="You Selected  Male "
+                }
+                else  if(b.checked==true)
+                {
+                    document.getElementById('x2').innerHTML="You Selected  Female"
+                }
+            }
+            function myFunction2()
+            {
+               
+                if(document.getElementById('a13').value.search('ab')>=1)
+                {
+                    document.getElementById('x3').innerHTML="Searched String is found";
+                }
+                else{
+                    document.getElementById('x3').innerHTML="Searched String is not found";
+                }
+             
+            }
+
+            function myFunction3()
+            {
+                var a=[2,3,4,1,7,8,9];
+                var swap=0;
+                for(i=0;i<a.length-1;i++)
+                {
+                    for(j=i+1;j<a.length;j++)
+                    {
+                        if(a[i]>a[j])
+                        {
+                            swap=a[j];
+                            a[j]=a[i];
+                            a[i]=swap;
+
+                        }
+                    }
+                }
+                for(i=0;i<a.length;i++)
+                {
+                    document.write(a[i] + "<br >");
+                }
+
+            }
+
+            
+            
+            </script>
+            HTML <input type="checkbox" id="a3" onclick="myFunction()">
+            CSS  <input type="checkbox" id="a4" onclick="myFunction()">
+            <input type="radio" name="colors" id="gender" value="Male" onclick="myFunction1()" >Male 
+            <input type="radio"  name="colors" id="gender1" value="Female" onclick="myFunction1()" >Female 
+             <input type="text" id="a13" name="search">
+             <button onclick="myFunction2()">Index Of</button>
+             <button onclick="myFunction3()">Array Index</button>
+           <p id="x1"></p>
+           <p id="x2"></p>
+           <p id="x3"></p>
+        </body>
+    </head>
+</html>
